@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delta Air Lines Luggage Resolution Form</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f5f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .form-container {
+      background: linear-gradient(to right, #4e73df, #1cc88a);
+      padding: 20px;
+      border-radius: 10px;
+      width: 95%;
+      max-width: 450px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      color: #fff;
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+    h2 {
+      font-size: 1.2rem;
+      margin: 15px 0 10px;
+      color: #d1ecf1;
+    }
+    label, input, textarea, select {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    input, textarea, select {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="date"] {
+      background: #e9ecef;
+    }
+    textarea {
+      resize: vertical;
+      background: #e9ecef;
+    }
+    input[type="file"] {
+      padding: 5px;
+      background: #e9ecef;
+      border-radius: 5px;
+      color: #666;
+    }
+    .radio-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .submit-button {
+      background-color: #f6c23e;
+      color: #333;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    .submit-button:hover {
+      background-color: #e9af2a;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Delta Air Lines Luggage Resolution</h1>
+    <form id="luggageForm">
+      
+      <h2>Step 1: Input Your Information</h2>
+      <label>Ticket/Reservation Number:
+        <input type="text" name="ticketNumber" required placeholder="Enter your ticket or reservation number">
+      </label>
+      <label>Luggage Tag Number (optional):
+        <input type="text" name="tagNumber" placeholder="Enter luggage tag number">
+      </label>
+
+      <h2>Step 2: Personal Details</h2>
+      <label>First Name:
+        <input type="text" name="firstName" required placeholder="Enter your first name">
+      </label>
+      <label>Last Name:
+        <input type="text" name="lastName" required placeholder="Enter your last name">
+      </label>
+      <label>Email Address:
+        <input type="email" name="email" required placeholder="Enter your email">
+      </label>
+      <label>Phone Number:
+        <input type="tel" name="phone" required placeholder="Enter your phone number">
+      </label>
+
+      <h2>Step 3: Incident Details</h2>
+      <label>Date of Incident:
+        <input type="date" name="dateOfIncident" required>
+      </label>
+      <label>Flight Number:
+        <input type="text" name="flightNumber" required placeholder="Enter flight number">
+      </label>
+      <label>Departure Airport:
+        <input type="text" name="departureAirport" required placeholder="Enter departure airport">
+      </label>
+      <label>Destination Airport:
+        <input type="text" name="destinationAirport" required placeholder="Enter destination airport">
+      </label>
+
+      <h2>Step 4: Issue Description</h2>
+      <label>Type of Issue:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="issueType" value="Delayed Luggage" required> Delayed Luggage</label>
+        <label><input type="radio" name="issueType" value="Lost Luggage"> Lost Luggage</label>
+        <label><input type="radio" name="issueType" value="Damaged Luggage"> Damaged Luggage</label>
+      </div>
+      <label>Description of Issue:
+        <textarea name="issueDescription" required placeholder="Briefly describe the problem"></textarea>
+      </label>
+
+      <h2>Step 5: Contact with Customer Service</h2>
+      <label>Have you contacted Delta Air Lines Customer Service?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="contactedCustomerService" value="Yes"> Yes</label>
+        <label><input type="radio" name="contactedCustomerService" value="No"> No</label>
+      </div>
+      <label>If Yes, provide Case Number:
+        <input type="text" name="caseNumber" placeholder="Enter case number">
+      </label>
+
+      <h2>Step 6: Upload Supporting Documents (optional)</h2>
+      <label>Upload Documents/Photos:
+        <input type="file" name="supportingDocuments" accept="image/*, application/pdf">
+      </label>
+
+      <h2>Step 7: Submit Your Form</h2>
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
